@@ -1,0 +1,30 @@
+.answer {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  padding: 10px;
+  border-radius: 26px;
+
+  &__counter {
+    color: $fontColor; 
+    font-size: 2rem;
+  }
+
+  &__icon {
+    height: 30px;
+  }
+
+  &_right {
+    background: $success;
+  }
+
+  &_wrong {
+    order: 2;
+    margin-left: 10px;
+    background: $danger;
+
+    @media (max-width: $mobile) {
+      order: initial;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.buckets {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  margin: 100px;
+  @media (max-width: $mobile) {
+    height: 200px;
+  }
+}
+
+.bucket {
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+
+  &__label {
+    position: relative;
+    min-width: 150px;
+    height: 30px;
+    padding: 0 5px;
+    text-align: center;
+    margin: 0 50% 5px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    color: $fontColor;
+    background: $danger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+      @media (max-width: $mobile) {
+      transform: rotate(-50deg) translateX(calc(-50% + 30px)) translateY(-45px);
+    }    
+  }
+
+  &__display {
+      position: relative;
+    
+      @media (max-width: $mobile) {
+        bottom: -10px;
+      }
+  }
+
+  &__top {
+    position: absolute;
+    top: 5px;
+    width: 82%;
+    min-width: 86px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__outer-base {
+    height: 90px;
+    margin: 0 2px;
+  }
+
+  &__base {
+    position: relative;
+    bottom: -10px;
+    width: 100%;
+    min-width: 101px;
+    min-height: 140px;
+    margin: 0 50%;
+    transform: translateX(-50%);
+  }
+
+}

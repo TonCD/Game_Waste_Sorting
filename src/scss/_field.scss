@@ -1,0 +1,23 @@
+.field {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    
+    @media (max-width: $mobile) { 
+      justify-content: space-around;
+    }
+  }
+
+  &__header {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 45px;
+  }
+} 

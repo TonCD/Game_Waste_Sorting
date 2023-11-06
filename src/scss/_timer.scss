@@ -1,0 +1,89 @@
+.timer {
+
+  @media (max-width: $mobile) {
+    width: 100vw;
+  }
+
+  &__inner {
+    position: relative;
+    width: 300px;
+    margin: auto;
+  }
+
+  &__circle {
+    fill: none;
+    stroke: none;
+  }
+
+  &__start-button {
+    fill: $accent;
+    color: $fontColor;
+  }
+
+  &__path-remaining {
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: $accent;
+  }
+
+  &__start-button {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: none;
+    font-size: 85px;
+    background: $accent;
+    cursor: pointer;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+  }
+
+  &__garbage {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 90;
+    font-size: 100px;    
+  }
+
+  &__garbage-shadow {
+    position: absolute;
+    opacity: 0.5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 80;
+  }
+
+  &__result {
+
+    &.right {
+      position: absolute;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background: $success url('../../public/assets/icons/ok.png') 50% no-repeat;
+    }
+
+    &.wrong {
+      position: absolute;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background: $danger url('../../public/assets/icons/no.png') 50% no-repeat;
+    }
+  }
+}

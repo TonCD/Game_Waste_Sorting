@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'game';
+@import 'buckets';
+@import 'field';
+@import 'timer';
+@import 'answer';
+@import 'play-again';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  background: #aaa;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}

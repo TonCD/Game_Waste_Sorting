@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/main.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <article class="game">
+      <button class="game__close">
+        X
+      </button>
+      <div class="game__field field">
+        <div class="field__header">
+          Toàn
+        </div>
+        <div class="field__info info">
+          <div class="info__answer answer answer_right">
+            <img src="./assets/icons/ok.png" class="answer__icon" alt="ok">
+            <span class="answer__counter answer__counter_right">
+              0
+            </span>
+          </div>
+          <div class="info__answer answer answer_wrong">
+            <img src="./assets/icons/no.png" class="answer__icon" alt="no">
+            <span class="answer__counter answer__counter_wrong">
+              0
+            </span>
+          </div>
+          <div class="info__play-again play-again hidden">
+            <button class="play-again__inner">
+              <img src="./assets/icons/reload.png" class="play-again__icon" alt="reload">
+              <span class="play-again__label">
+                Play Again
+              </span>
+            </button>
+          </div>
+          <div class="info__timer timer">
+            <div class="timer__inner">
+              <svg class="timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g class="timer__circle">
+                  <path id="timer-path-remaining" stroke-dasharray="283" class="timer__path-remaining" d="
+                        M 50, 50
+                        m -45, 0
+                        a 45,45 0 1,0 90,0
+                        a 45,45 0 1,0 -90,0
+                      "></path>
+                </g>
+              </svg>
+              <div class="timer__content">
+                <button class="timer__start-button">
+                  Start
+                </button>
+                <div class="timer__garbage hidden"></div>
+                <div class="timer__garbage-shadow hidden"></div>
+                <div class="timer__result hidden"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field__buckets buckets">
+          <template id="bucket">
+            <div class="bucket__container">
+              <div class="bucket__label"></div>
+              <div class="bucket__display">
+                <img class="bucket__top">
+                <div class="bucket__outer-base">
+                  <img class="bucket__base">
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </article>
+  </div>
+
+</body>
+
+</html>
