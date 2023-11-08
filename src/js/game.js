@@ -147,9 +147,14 @@ function checkSelection(e) {
   })
   
   setTimeout(() => {
+    resultElement.classList.remove('hidden');
+
     resultElement.classList.add(isRightAnswer ? 'right' : 'wrong')
     garbage.classList.add('hidden')
     garbageShadow.classList.add('hidden')
+    setTimeout(() => {
+      resultElement.classList.add('hidden');
+    }, 1000); // 2 second
   }, animationDuration / 2.1)
 
   setTimeout(() => {
