@@ -1,11 +1,14 @@
 {
+  "homepage": "https://toncd.github.io/Game_Waste_Sorting/",
   "name": "Waste_Sorting_Game",
   "version": "0.0.1",
   "description": "",
   "main": "main.js",
   "scripts": {
     "build": "webpack --mode=production",
-    "dev": "webpack serve --hot --mode=development"
+    "dev": "webpack serve --hot --mode=development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
-    "autoprefixer": "10.4.5"
+    "autoprefixer": "10.4.5",
+    "gh-pages": "^6.1.0"
   }
 }
